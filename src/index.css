@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav ul.li.a.active {
+  @apply text-[#FF5050];
+}
+.container {
+  width: 100%;
+  max-width: 1408px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Submenu parent li */
+.group {
+  position: relative;
+}
+
+/* Submenu ul */
+.group ul {
+  position: absolute;
+  top: 100%; /* Parentning tagida ko'rinsin */
+  left: 0;
+  width: 220px; /* Submenu kengligi */
+  height: auto;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Defaultda yashirin */
+  z-index: 10;
+}
+
+/* Hover bo'lganda menyu ko'rinsin */
+.group:hover ul,
+.group ul:hover {
+  display: block;
+}
+
+/* Submenu elementlari */
+.group ul li {
+  width: 100%; /* To'liq kenglikni oladi */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Hover bo'lganda fon rangi */
+.group ul li:hover {
+  background-color: #f3f3f3;
+}
+
+/* Linklar dizayni */
+.group ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  width: 100%;
+}
+
+/* Link hover effekti */
+.group ul li a:hover {
+  color: #ff5059; /* Hover bo'lganda rang o'zgarishi */
+}
+/* Container to hold dropdown */
+.menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Main menu button */
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 10px 0 0 0;
+}
+
+.menu-button:hover {
+  color: #ff5050;
+}
+
+.hover-trigger:hover .hover-target {
+  display: block;
+}
+.hover-target {
+  display: none;
+}
+
+.hover\:custom-rotate:hover {
+  transform: rotate(180deg);
+}
+/* tap */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.slideInRight {
+  animation: slideInRight 1s ease-out;
+}
+
+.slideOutRight {
+  animation: slideOutRight 1s ease-out;
+}
+
+/* kompaniya haqida */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0; 
+    transform: translateX(-100%);
+  }
+}
+.animate-slideInLeft {
+  animation: slideInLeft 1s ease-out forwards;
+}
+.animate-slideOutLeft {
+  animation: slideOutLeft 1s ease-in forwards;
+}
+/* Afzalliklar */
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInTop {
+  animation: slideInTop 1s ease-out;
+}
+
+/* MahsusTakliflar */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* savol-javob */
+.accordion-content {
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+
+
