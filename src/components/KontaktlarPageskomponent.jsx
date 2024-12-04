@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Location from "../components/Location";
 import Telegramimg from "../img/Footer-telegram.svg";
-import Watsapimg from "../img/watsap.svg";
 import KonraktlarImg1 from "../img/kontaktlarimg1.svg";
 import KonraktlarImg2 from "../img/kontaktlarimg2.svg";
 import KonraktlarImg3 from "../img/kontaktlarimg3.svg";
